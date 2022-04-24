@@ -1,8 +1,7 @@
 import axios from "axios";
 import IMovie from "../model/IMovie";
 
-//const baseUrl = process.env.REACT_APP_API_BASE_URL;
-const baseUrl = 'http://localhost:3001';
+const baseUrl = process.env.REACT_APP_API_BASE_URL;
 
 const getMovies = async (moviesCategory: string) => {
   const response = await axios.get<IMovie[]>(`${baseUrl}/${moviesCategory}`);
